@@ -11,6 +11,8 @@
       <% @cocktail.doses.each do |dose| %>
       <%= dose.description %>
       <%= dose.ingredient.name %>
+      <% dose.destroy %>
+
       <% end %>
     </div>
     <div class="media-section">
