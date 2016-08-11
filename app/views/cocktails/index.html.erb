@@ -8,6 +8,7 @@
         <h3>
           <%= link_to cocktail.name, cocktail_path(cocktail) %>
         </h3>
+        <%= link_to 'remove', cocktail_path(cocktail), method: :delete %>
       </div>
     </div>
   <% end %>

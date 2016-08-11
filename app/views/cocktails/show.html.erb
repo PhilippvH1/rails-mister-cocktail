@@ -7,17 +7,20 @@
   </div>
   <div class="media-aside">
     <div class="media-section">
-      <h2>Ingredients</h2>
+      <h2>Recipe</h2>
       <% @cocktail.doses.each do |dose| %>
-      <%= dose.description %>
+      <p><%= dose.description %>
       <%= dose.ingredient.name %>
-      <%= link_to 'remove', cocktail_dose_path(@cocktail, dose), method: :delete %>
+      <%= link_to cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: 'Are you sure you want to delete this article?'} do %>
+        <i class="fa fa-trash-o"></i>
+        <% end %>
+      </p>
 
       <% end %>
     </div>
     <div class="media-section">
       <h3>Add ingredient</h3>
-      <%= render 'doses/form', dose: @dose, cocktail: @cocktail %>
+      <%= render 'doses/form' %>
     </div>
   </div>
 </div>
