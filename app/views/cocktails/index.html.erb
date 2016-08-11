@@ -1,0 +1,14 @@
+<h1 class="text-center">
+  Your Cocktails
+</h1>
+<ul>
+  <% @cocktails.each do |cocktail| %>
+    <div class="product">
+      <div class='product-body'>
+        <h3>
+          <%= cocktail.name %>
+        </h3>
+      </div>
+    </div>
+  <% end %>
+</ul>
