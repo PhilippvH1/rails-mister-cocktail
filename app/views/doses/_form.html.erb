@@ -1,5 +1,4 @@
 <%= simple_form_for ([cocktail, dose]) do |f| %>
-    <% f.errors  %>
     <%= f.input :description %>
     <%= f.input :ingredient_id, as: :select, collection: Ingredient.all %>
   <%= f.submit %>
