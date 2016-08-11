@@ -11,6 +11,20 @@
   </head>
 
   <body>
+    <div class="navbar-wagon">
+
+      <!-- Right Navigation -->
+      <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+        <!-- Text link -->
+        <a href="/" class="navbar-wagon-item navbar-wagon-link">Home</a>
+
+        <!-- Text link -->
+        <%= link_to 'new', new_cocktail_path  %>
+
+      </div>
+
+    </div>
     <%= yield %>
   </body>
 </html>
