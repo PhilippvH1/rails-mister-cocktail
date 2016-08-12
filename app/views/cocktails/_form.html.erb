@@ -1,6 +1,7 @@
-<%= form_for(@cocktail) do |f| %>
+<%= simple_form_for(@cocktail) do |f| %>
   <h2><%= f.label :name %></h2>
   <p><%= f.text_field :name %></p>
-
+  <p><%= f.input :photo %></p>
+  <%= f.input :photo_cache, as: :hidden %>
   <%= f.submit %>
 <% end %>

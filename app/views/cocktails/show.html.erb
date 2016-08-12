@@ -2,7 +2,8 @@
   <div class="media-body">
     <div class="media-section">
       <h2><%= @cocktail.name %></h2>
-      <img src="https://hd.unsplash.com/photo-1444728399417-08d2aa39e6f4">
+      <%= image_tag @cocktail.photo.url(:show) %>
+
     </div>
   </div>
   <div class="media-aside">
